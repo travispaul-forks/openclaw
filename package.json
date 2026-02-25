@@ -1,5 +1,9 @@
 {
-  "name": "@travispaul-forks/openclaw",
+  "name": "openclaw",
+  "publishConfig": {
+    "name": "@travispaul-forks/openclaw",
+    "access": "public"
+  },
   "version": "2026.2.24",
   "description": "Multi-channel AI gateway with extensible messaging integrations",
   "keywords": [],
@@ -238,7 +242,8 @@
       "@sinclair/typebox": "0.34.48",
       "tar": "7.5.9",
       "tough-cookie": "4.1.3",
-      "koffi": "npm:@travispaul-forks/koffi@2.15.1"
+      "koffi": "npm:@travispaul-forks/koffi@2.15.1",
+      "rollup": "npm:@rollup/wasm-node@4.59.0"
     },
     "onlyBuiltDependencies": [
       "@lydell/node-pty",
