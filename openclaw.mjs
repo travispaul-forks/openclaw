@@ -2,6 +2,12 @@
 
 import module from "node:module";
 
+// On SunOS, register loader hooks that stub out packages with unsupported
+// platform checks (e.g. playwright-core) before any imports touch them.
+if (process.platform === "sunos" && module.register) {
+  module.register("./src/infra/sunos-loader-hooks.mjs", import.meta.url);
+}
+
 // https://nodejs.org/api/module.html#module-compile-cache
 if (module.enableCompileCache && !process.env.NODE_DISABLE_COMPILE_CACHE) {
   try {
