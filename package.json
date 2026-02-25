@@ -1,9 +1,6 @@
 {
-  "name": "@travispaul-forks/openclaw",
-  "publishConfig": {
-    "access": "public"
-  },
-  "version": "2026.2.24-2ea1dd664",
+  "name": "openclaw",
+  "version": "2026.2.24-ff959b03c",
   "description": "Multi-channel AI gateway with extensible messaging integrations",
   "keywords": [],
   "homepage": "https://github.com/openclaw/openclaw#readme",

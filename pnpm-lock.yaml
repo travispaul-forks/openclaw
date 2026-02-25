@@ -133,6 +133,9 @@ importers:
       jszip:
         specifier: ^3.10.1
         version: 3.10.1
+      koffi:
+        specifier: npm:@travispaul-forks/koffi@2.15.1
+        version: '@travispaul-forks/koffi@2.15.1'
       linkedom:
         specifier: ^0.18.12
         version: 0.18.12
