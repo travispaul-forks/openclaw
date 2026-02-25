@@ -88,6 +88,11 @@ fi
 pnpm -s exec tsc -p "$A2UI_RENDERER_DIR/tsconfig.json"
 if command -v rolldown >/dev/null 2>&1; then
   rolldown -c "$A2UI_APP_DIR/rolldown.config.mjs"
+elif [[ "$(uname -s)" == "SunOS" ]]; then
+  echo "Skipping A2UI bundle: rolldown has no SunOS native bindings." >&2
+  echo "// A2UI bundle unavailable on this platform" > "$OUTPUT_FILE"
+  echo "$current_hash" > "$HASH_FILE"
+  exit 0
 else
   pnpm -s dlx rolldown -c "$A2UI_APP_DIR/rolldown.config.mjs"
 fi
