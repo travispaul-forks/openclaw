@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "2026.2.24",
+  "version": "2026.2.24-fa580d579",
   "description": "Multi-channel AI gateway with extensible messaging integrations",
   "keywords": [],
   "homepage": "https://github.com/openclaw/openclaw#readme",
@@ -223,6 +223,9 @@
   },
   "optionalDependencies": {
     "@discordjs/opus": "^0.10.0"
+  },
+  "overrides": {
+    "koffi": "npm:@travispaul-forks/koffi@2.15.1"
   },
   "engines": {
     "node": ">=22.12.0"
